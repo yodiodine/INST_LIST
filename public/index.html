@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>list</title>
+        <script defer type="module" src="/script/main.js"></script>
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/reset.css">
+    </head>
+    <body>
+        <header id="header">
+            <button class="lg_inout_btn">관리자 로그인</button>
+            
+            <h1>cool title</h1>
+
+        </header>
+        <div id="content_wrap">
+
+            <div class="add_wrap"></div>
+            <div class="ss_wrap" style="display: none;">
+                <div class="sort_btn_wrap">
+                    <span>정렬: </span>
+                    <button>이름순</button>
+                    <button>날짜순</button>
+                </div>
+                <div class="search_wrap">
+                    <input type="text">
+                    <button class="search_btn">검색</button>
+                    <button class="reset_btn">초기화</button>
+                </div>
+            </div>
+
+            <div class="list_wrap">
+                <ul class="vd_list">
+                    <li>
+                        <a href="#">
+                            <img src="" alt="img">
+                            <div>
+                                <p>title</p>
+                                <p>2023-01-01</p>
+                                <p>link</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nothing">
+                    조회된 리스트 없음
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <button>top</button>
+        </footer>
+
+        <!-- login pop -->
+        <div class="lgn_pop">
+            <div class="lgn_ele">
+                <div class="close_wrap">
+                    <button class="close_lgn">×</button>
+                </div>
+    
+                <div class="input_wrap">
+                    <div>
+                        <p>Email:</p>
+                        <input class="email" type="text" placeholder="이메일 입력">
+                    </div>
+                    <div>
+                        <p>password:</p>
+                        <input class="pw" type="password" placeholder="비밀번호 입력">
+                    </div>
+                </div>
+    
+                <button class="lgn_btn">로그인</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+button{
+    background-color: #fdfdfd;
+    border: 1px solid #ecf1f3;
+    box-shadow: 0px 2px 3px rgb(225, 227, 228);
+    padding: 5px 10px;
+}
+.nothing{
+    margin-top: 30px;
+    color: #aaaaaa;
+    text-align: center;
+}
+button:active{
+    background-color: #f5f5f5;
+}
+
+#header{
+    position: relative;
+    height: 100px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-flow: row-reverse;
+}
+#header h1{font-size: 24px;}
+
+
+#content_wrap{
+    margin: 30px;
+    margin-top: 50px;}
+#content_wrap .add_wrap{
+    text-align: right;
+}
+#content_wrap .add_wrap .add_btn{}
+#content_wrap .ss_wrap{
+    margin-top: 23px;
+}
+#content_wrap .ss_wrap::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+#content_wrap .ss_wrap .sort_btn_wrap{
+    float: left;
+}
+#content_wrap .ss_wrap .sort_btn_wrap button{}
+#content_wrap .ss_wrap .search_wrap{
+    float: right;
+}
+#content_wrap .ss_wrap .search_wrap input{}
+#content_wrap .ss_wrap .search_wrap .search_btn{}
+
+#content_wrap .list_wrap{
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #c6c6c6;
+}
+#content_wrap .list_wrap .vd_list{
+    border: 1px solid #ecf1f3;
+    box-shadow: 0px 2px 3px rgb(225, 227, 228);
+}
+#content_wrap .list_wrap .vd_list li{}
+#content_wrap .list_wrap .vd_list li a{
+    display: flex;
+    padding: 10px 20px;
+}
+#content_wrap .list_wrap .vd_list li img{
+    width: 50px; height: 50px;
+}
+
+
+#footer{
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+.lgn_pop{
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.lgn_pop.open{display: block;}
+.lgn_pop .lgn_ele{
+    position: fixed;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+    width: 230px;
+    background-color: #fff;
+    padding: 20px;
+}
+.lgn_pop .lgn_ele .close_wrap{
+    text-align: right;
+}
+.lgn_pop .lgn_ele .close_wrap .close_lgn{}
+.lgn_pop .lgn_ele .input_wrap{
+    margin-top: 10px;
+    padding: 5px 0;
+}
+.lgn_pop .lgn_ele .input_wrap p{
+    font-size: 12px;
+    color: #777;
+    margin-top:10px
+}
+.lgn_pop .lgn_ele .input_wrap input{
+    border: none;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    border-bottom: 1px solid #c6c6c6;
+}
+.lgn_pop .lgn_ele .input_wrap input:focus{
+    outline: none;
+}
+.lgn_pop .lgn_ele .lgn_btn{
+    margin-top: 20px;
+    float: right;
+}
