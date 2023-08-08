@@ -28,10 +28,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-
-
 // Initialize Realtime Database and get a reference to the service
 const database = getDatabase(app);
+
+const vd_list = document.querySelector('.vd_list');
+const nothing_list = document.querySelector('.nothing_list');
 
 export const dbRead = () =>{
     const refDb = ref(database, 'INST_LIST/');
@@ -39,8 +40,16 @@ export const dbRead = () =>{
     onValue(refDb,(snapshot)=>{
         data = snapshot.val();
         console.log(data)
-        if(data.length > 0) makeList(data);
-        else console.log("no data")
+        if(data.length > 0) {
+            vd_list.classList.remove('hide');
+            nothing_list.classList.add('hide');
+            makeList(data);
+        }
+        else {
+            console.log("no data")
+            vd_list.classList.add('hide');
+            nothing_list.classList.remove('hide');
+        }
     })
 }
 
@@ -97,7 +106,7 @@ export const logOut = ()=>{
 }
 
 function makeList(data){
-    for(let i=0;i<data.length;i++){
+    for(let i=1;i<data.length;i++){
         console.log(data[i].TITLE);
     }
 }
