@@ -10,6 +10,7 @@ window.onload = function(){
     const lgn_btn = document.querySelector(".lgn_btn");
     const email = document.querySelector('.email');
     const pw = document.querySelector('.pw');
+    const top_btn = document.querySelector('#footer button');
     
     //로그인
     lgn_btn.addEventListener('click',(e)=>{
@@ -57,5 +58,8 @@ window.onload = function(){
         if(e.keyCode === 13) lgn_btn.click();
     })
 
+    top_btn.addEventListener('click',(e)=>{
+        window.scroll({top:0,behavior:'smooth'});
+    })
 
 }
