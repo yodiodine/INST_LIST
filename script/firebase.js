@@ -39,7 +39,6 @@ export const dbRead = () =>{
     let data;
     onValue(refDb,(snapshot)=>{
         data = snapshot.val();
-        console.log(data)
         if(data.length > 0) {
             vd_list.classList.remove('hide');
             nothing_list.classList.add('hide');
@@ -106,7 +105,9 @@ export const logOut = ()=>{
 }
 
 function makeList(data){
+    vd_list.innerHTML = "";
     for(let i=1;i<data.length;i++){
         console.log(data[i].TITLE);
+
     }
 }
