@@ -32,6 +32,7 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 const vd_list = document.querySelector('.vd_list');
+const vd_list_li = document.querySelector('.vd_list li.hide').outerHTML;
 const nothing_list = document.querySelector('.nothing_list');
 
 export const dbRead = () =>{
@@ -106,8 +107,16 @@ export const logOut = ()=>{
 
 function makeList(data){
     vd_list.innerHTML = "";
-    for(let i=1;i<data.length;i++){
-        console.log(data[i].TITLE);
 
+    for(let i=1;i<data.length;i++){
+        let list_ele = vd_list_li;
+        vd_list.innerHTML +=list_ele;
+        
+        let target_li = vd_list.childNodes[i-1];
+        target_li.querySelector('a').setAttribute('href',data[i].URL);
+        target_li.querySelector('.list_title').innerHTML = data[i].TITLE;
+        target_li.querySelector('.list_date').innerHTML = data[i].DATE;
+        target_li.querySelector('.list_desc').innerHTML = data[i].DESCRIPTION;
+        target_li.classList.remove('hide');
     }
 }
