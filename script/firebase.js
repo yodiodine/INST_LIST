@@ -110,12 +110,14 @@ function makeList(data){
 
     for(let i=1;i<data.length;i++){
         let list_ele = vd_list_li;
+        let date_format = ((data[i].DATE)+"").substring(0,4) + "-" + ((data[i].DATE)+"").substring(4,6) + "-" + ((data[i].DATE)+"").substring(6,8);
         vd_list.innerHTML +=list_ele;
+
         
         let target_li = vd_list.childNodes[i-1];
         target_li.querySelector('a').setAttribute('href',data[i].URL);
         target_li.querySelector('.list_title').innerHTML = data[i].TITLE;
-        target_li.querySelector('.list_date').innerHTML = data[i].DATE;
+        target_li.querySelector('.list_date').innerHTML = date_format;
         target_li.querySelector('.list_desc').innerHTML = data[i].DESCRIPTION;
         target_li.classList.remove('hide');
     }

@@ -75,7 +75,7 @@ button:active{
     padding: 10px 20px;
 }
 #content_wrap .list_wrap .vd_list li a p{
-    padding-bottom: 10px;
+    padding: 5px 0;
 }
 #content_wrap .list_wrap .vd_list li a p.list_date{
     font-size: 12px;
